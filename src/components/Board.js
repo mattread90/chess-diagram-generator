@@ -3,25 +3,36 @@ import React from "react";
 import { Square } from "./Square";
 
 import styles from "./Board.module.scss";
+import { isSquareSelected } from "../selectors/ui";
 
-const Board = ({ board }) => {
+const Board = ({ board, onSquareClick, selectedSquare }) => {
   return (
     <div id="diagram" className={styles.board}>
       {board.map((row, i) => (
-        <Row key={`row-${i}`} row={row} rowIndex={i} />
+        <Row
+          key={`row-${i}`}
+          row={row}
+          rowIndex={i}
+          onSquareClick={onSquareClick}
+          selectedSquare={selectedSquare}
+        />
       ))}
     </div>
   );
 };
 
-const Row = ({ row, rowIndex }) => {
+const Row = ({ row, rowIndex, onSquareClick, selectedSquare }) => {
   return (
     <div className={styles.row}>
       {row.map((square, columnIndex) => (
         <Square
           key={`square-${rowIndex}-${columnIndex}`}
+          row={rowIndex}
+          col={columnIndex}
           color={getColor(rowIndex, columnIndex)}
-          {...square}
+          onClick={onSquareClick}
+          selected={isSquareSelected(selectedSquare, rowIndex, columnIndex)}
+          piece={square}
         />
       ))}
     </div>

@@ -8,15 +8,12 @@
 
 .black {
   background-color: darkslategray;
-  color: white;
 }
 
 .white {
-  color: darkslategray;
   background-color: white;
 }
 
 .selected {
-  box-sizing: border-box;
-  border: #ff5f5f solid 5px;
+  box-shadow: inset 0px 0px 5px 5px #ff5f5f;
 }
