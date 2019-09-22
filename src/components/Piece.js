@@ -5,12 +5,12 @@ import styles from "./Piece.module.scss";
 
 const sourceMap = {
   white: {
-    R: { emoji: "♖" },
-    N: { emoji: "♘" },
-    B: { emoji: "♗" },
-    Q: { emoji: "♕" },
-    K: { emoji: "♔" },
-    p: { emoji: "♙" }
+    R: { emoji: "♜" },
+    N: { emoji: "♞" },
+    B: { emoji: "♝" },
+    Q: { emoji: "♛" },
+    K: { emoji: "♚" },
+    p: { emoji: "♟" }
   },
   black: {
     R: { emoji: "♜" },
