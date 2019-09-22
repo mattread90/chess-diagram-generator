@@ -8,14 +8,12 @@
 
 .board {
   grid-area: "board";
-  background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .controls {

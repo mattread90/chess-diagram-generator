@@ -2,21 +2,30 @@ import React from "react";
 
 import { Square } from "./Square";
 
-import styles from "./Board.module.scss";
 import { isSquareSelected } from "../selectors/ui";
+import { RowCoords, ColCoords } from "./Coord";
+import styles from "./Board.module.scss";
 
 const Board = ({ board, onSquareClick, selectedSquare }) => {
   return (
-    <div id="diagram" className={styles.board}>
-      {board.map((row, i) => (
-        <Row
-          key={`row-${i}`}
-          row={row}
-          rowIndex={i}
-          onSquareClick={onSquareClick}
-          selectedSquare={selectedSquare}
-        />
-      ))}
+    <div id="diagram" className={styles.wrapper}>
+      <div className={styles.yCoords}>
+        <RowCoords />
+      </div>
+      <div className={styles.board}>
+        {board.map((row, i) => (
+          <Row
+            key={`row-${i}`}
+            row={row}
+            rowIndex={i}
+            onSquareClick={onSquareClick}
+            selectedSquare={selectedSquare}
+          />
+        ))}
+      </div>
+      <div className={styles.xCoords}>
+        <ColCoords />
+      </div>
     </div>
   );
 };
