@@ -1,0 +1,12 @@
+.controls {
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  max-width: 60px;
+  justify-content: center;
+}

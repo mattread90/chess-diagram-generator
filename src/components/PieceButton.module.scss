@@ -1,4 +1,4 @@
-.square {
+.button {
   height: 50px;
   width: 50px;
   display: flex;
@@ -6,17 +6,12 @@
   align-items: center;
 }
 
-.black {
-  background-color: darkslategray;
-  color: white;
-}
-
 .white {
   color: darkslategray;
   background-color: white;
 }
 
-.selected {
-  box-sizing: border-box;
-  border: #ff5f5f solid 5px;
+.black {
+  background-color: darkslategray;
+  color: white;
 }

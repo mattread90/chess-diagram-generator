@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "board  controls"
+    "footer  footer ";
+}
+
+.board {
+  grid-area: "board";
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.controls {
+  grid-area: "controls";
+}
+
+.footer {
+  grid-area: "footer";
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.downloadButton {
+  font-size: 20px;
+}
