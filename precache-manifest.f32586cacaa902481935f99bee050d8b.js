@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8f41dcfbfbf5502c51677ff4aa227a4e",
+    "revision": "7370a76f3e9d028aa5eb51c06c909b4c",
     "url": "/chess-diagram-generator/index.html"
   },
   {
