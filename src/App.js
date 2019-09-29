@@ -6,9 +6,7 @@ import { downloadDiagram } from "./actions/downloadDiagram";
 import { Board } from "./components/Board";
 import { Controls } from "./components/Controls";
 import { selectSquare, unselectSquare } from "./actions/ui";
-import { boardReducer, init } from "./reducers/board";
-import { setPiece } from "./actions/board";
-import { getBoard } from "./selectors/board";
+import { withBoard } from "./features/board";
 
 function App() {
   const [ui, dispatchUi] = useReducer(uiReducer, { selected: null });
@@ -16,16 +14,6 @@ function App() {
     (row, col) => dispatchUi(selectSquare(row, col)),
     []
   );
-  const [boardState, dispatchBoard] = useReducer(boardReducer, undefined, init);
-  const handlePieceButtonClick = useCallback(
-    (piece, color) => {
-      if (ui.selected) {
-        dispatchBoard(setPiece(ui.selected.row, ui.selected.col, piece, color));
-      }
-    },
-    [ui.selected]
-  );
-  const board = getBoard(boardState);
 
   const handleDownloadClick = useCallback(async () => {
     dispatchUi(unselectSquare());
@@ -37,13 +25,17 @@ function App() {
     <div className={styles.App}>
       <section className={styles.board}>
         <Board
-          board={board}
+          rows={8}
+          cols={8}
           selectedSquare={ui.selected}
           onSquareClick={handleSquareClick}
         />
       </section>
       <section className={styles.buttons}>
-        <Controls onPieceButtonClick={handlePieceButtonClick} />
+        <Controls
+          row={ui.selected ? ui.selected.row : null}
+          col={ui.selected ? ui.selected.col : null}
+        />
       </section>
       <footer className={styles.footer}>
         <button className={styles.downloadButton} onClick={handleDownloadClick}>
@@ -54,4 +46,6 @@ function App() {
   );
 }
 
-export default App;
+const AppWithBoardState = withBoard(App);
+
+export default AppWithBoardState;

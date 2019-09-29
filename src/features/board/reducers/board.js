@@ -1,14 +1,5 @@
 import { squareId } from "../utils/board";
 
-export function init() {
-  return Array(8 * 8)
-    .fill({})
-    .reduce((board, square, index) => {
-      board[`${Math.floor(index / 8)}-${index % 8}`] = square;
-      return board;
-    }, {});
-}
-
 export function boardReducer(board, action) {
   if (
     typeof action.payload.row === "number" &&

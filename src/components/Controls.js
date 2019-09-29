@@ -5,7 +5,7 @@ import { PieceButton } from "./PieceButton";
 
 const PIECES = ["R", "N", "B", "Q", "K", "p"];
 
-const Controls = ({ active, onPieceButtonClick }) => {
+const Controls = ({ active, row, col }) => {
   return (
     <div className={styles.controls}>
       <div className={styles.column}>
@@ -14,7 +14,8 @@ const Controls = ({ active, onPieceButtonClick }) => {
             key={`white-${piece}`}
             piece={piece}
             color="white"
-            onClick={onPieceButtonClick}
+            row={row}
+            col={col}
           />
         ))}
       </div>
@@ -24,7 +25,8 @@ const Controls = ({ active, onPieceButtonClick }) => {
             key={`black-${piece}`}
             piece={piece}
             color="black"
-            onClick={onPieceButtonClick}
+            row={row}
+            col={col}
           />
         ))}
       </div>

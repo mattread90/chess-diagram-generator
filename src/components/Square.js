@@ -3,8 +3,10 @@ import cn from "classnames";
 
 import { Piece } from "./Piece";
 import styles from "./Square.module.scss";
+import { useSquare } from "../features/board";
 
-const Square = ({ color, piece, selected, row, col, onClick }) => {
+const Square = ({ color, selected, row, col, onClick }) => {
+  const piece = useSquare(row, col);
   const handleClick = useCallback(() => onClick(row, col), [row, col, onClick]);
   return (
     <div
@@ -13,7 +15,7 @@ const Square = ({ color, piece, selected, row, col, onClick }) => {
       })}
       onClick={handleClick}
     >
-      <Piece piece={piece} />
+      {piece && <Piece piece={piece} />}
     </div>
   );
 };
