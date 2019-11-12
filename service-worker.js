@@ -28,36 +28,12 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "asset-manifest.json",
-    "revision": "be5a2d50c51c7708f77ffacc748715af"
-  },
-  {
-    "url": "favicon.ico",
-    "revision": "33d46e7cf3159d286d3129c9b5feab74"
-  },
-  {
     "url": "index.html",
     "revision": "386adc0db2c5fa07984dcff7b9cc6c38"
   },
   {
-    "url": "logo192.png",
-    "revision": "581fa1d82b7152e685510b51d48edd3e"
-  },
-  {
-    "url": "logo512.png",
-    "revision": "260d57586012b0ed1ae78accc0bf7083"
-  },
-  {
-    "url": "manifest.json",
-    "revision": "d9d975cebe2ec20b6c652e1e4c12ccf0"
-  },
-  {
     "url": "precache-manifest.c37ddb2f76f41671d92490a2ab26864f.js",
     "revision": "c37ddb2f76f41671d92490a2ab26864f"
-  },
-  {
-    "url": "robots.txt",
-    "revision": "3ad0652bd17ff826a31fa29366021cfd"
   },
   {
     "url": "static/css/main.eae3c986.chunk.css",
@@ -74,10 +50,6 @@ self.__precacheManifest = [
   {
     "url": "static/js/runtime-main.a0b42a97.js",
     "revision": "20555c21c89cbf435127644b85bcbac3"
-  },
-  {
-    "url": "static/media/chess-image.c52fd2d4.png",
-    "revision": "c52fd2d4e30fc58814f982250a25b718"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -86,3 +58,5 @@ workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/c
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
+
+workbox.routing.registerRoute(/(?:json|ico|html|png|svg|js|txt|css)$/, new workbox.strategies.NetworkFirst(), 'GET');
