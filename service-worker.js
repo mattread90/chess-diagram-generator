@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chess-diagram-generator/precache-manifest.71f1ebfd260ba11be36f405232bc0d5f.js"
+  "/chess-diagram-generator/precache-manifest.d138dcd42b976b1751d0bbdd801de4fd.js"
 );
 
 self.addEventListener('message', (event) => {
