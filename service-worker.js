@@ -29,7 +29,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "asset-manifest.json",
-    "revision": "ef3f38a4da5d48b9bd27d389c007edaf"
+    "revision": "58521c3fa66680d90c59a13ba5bc448f"
   },
   {
     "url": "favicon.ico",
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "18ba9e81056ba3fe2b2f2de6be623425"
+    "revision": "b7e01e42b9bc69a5ebca07a124110394"
   },
   {
     "url": "logo192.png",
@@ -52,16 +52,16 @@ self.__precacheManifest = [
     "revision": "d9d975cebe2ec20b6c652e1e4c12ccf0"
   },
   {
-    "url": "precache-manifest.8c1ad0aaf04ae45afff31a5eb2ada691.js",
-    "revision": "8c1ad0aaf04ae45afff31a5eb2ada691"
+    "url": "precache-manifest.e55bc1b47a81ac0ec58fed945126331a.js",
+    "revision": "e55bc1b47a81ac0ec58fed945126331a"
   },
   {
     "url": "robots.txt",
     "revision": "3ad0652bd17ff826a31fa29366021cfd"
   },
   {
-    "url": "static/css/main.4dcc50fd.chunk.css",
-    "revision": "eadcfbd67260ad8f1b7ae4727e616ac8"
+    "url": "static/css/main.f8feb2c3.chunk.css",
+    "revision": "55cc47875c345beb5698cd0f3f7eecb0"
   },
   {
     "url": "static/js/2.064fc736.chunk.js",
