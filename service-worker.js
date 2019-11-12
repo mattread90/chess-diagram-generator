@@ -19,6 +19,8 @@ self.addEventListener('message', (event) => {
   }
 });
 
+workbox.core.clientsClaim();
+
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
  * requests for URLs in the manifest.
