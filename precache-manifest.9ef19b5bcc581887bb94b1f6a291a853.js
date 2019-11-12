@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e5a21d3477995dd72b8dad7e9cb3e02",
+    "revision": "53236e5e5e8f320d11513e2dc9849582",
     "url": "/chess-diagram-generator/index.html"
   },
   {
-    "revision": "63455c8faf609f861ff1",
-    "url": "/chess-diagram-generator/static/css/main.f88cf4d8.chunk.css"
+    "revision": "cab299711ef270abceda",
+    "url": "/chess-diagram-generator/static/css/main.3c828122.chunk.css"
   },
   {
     "revision": "16fb91c6d393778df493",
     "url": "/chess-diagram-generator/static/js/2.c165fca1.chunk.js"
   },
   {
-    "revision": "63455c8faf609f861ff1",
+    "revision": "cab299711ef270abceda",
     "url": "/chess-diagram-generator/static/js/main.8a80c58a.chunk.js"
   },
   {
