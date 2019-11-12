@@ -13,6 +13,10 @@
 
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
+importScripts(
+  "/chess-diagram-generator/precache-manifest.9ef19b5bcc581887bb94b1f6a291a853.js"
+);
+
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
@@ -26,37 +30,10 @@ workbox.core.clientsClaim();
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
-self.__precacheManifest = [
-  {
-    "url": "index.html",
-    "revision": "53236e5e5e8f320d11513e2dc9849582"
-  },
-  {
-    "url": "precache-manifest.9ef19b5bcc581887bb94b1f6a291a853.js",
-    "revision": "9ef19b5bcc581887bb94b1f6a291a853"
-  },
-  {
-    "url": "static/css/main.3c828122.chunk.css",
-    "revision": "ec5f11de9d92d395ccb4895ea7866a63"
-  },
-  {
-    "url": "static/js/2.c165fca1.chunk.js",
-    "revision": "92e92927a091b6c8ce758446d5f769c6"
-  },
-  {
-    "url": "static/js/main.8a80c58a.chunk.js",
-    "revision": "e29ee34257f61ca04cddd0a6d7bd33fb"
-  },
-  {
-    "url": "static/js/runtime-main.a0b42a97.js",
-    "revision": "20555c21c89cbf435127644b85bcbac3"
-  }
-].concat(self.__precacheManifest || []);
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/chess-diagram-generator/index.html"), {
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
-
-workbox.routing.registerRoute(/(?:json|ico|html|png|svg|js|txt|css)$/, new workbox.strategies.NetworkFirst(), 'GET');
