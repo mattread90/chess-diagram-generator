@@ -29,7 +29,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "asset-manifest.json",
-    "revision": "b7dc63975ea2b5cd120f3c5029bfe2ee"
+    "revision": "be5a2d50c51c7708f77ffacc748715af"
   },
   {
     "url": "favicon.ico",
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "b433d7afdac5fa3305fa29b099a60320"
+    "revision": "386adc0db2c5fa07984dcff7b9cc6c38"
   },
   {
     "url": "logo192.png",
@@ -52,28 +52,32 @@ self.__precacheManifest = [
     "revision": "d9d975cebe2ec20b6c652e1e4c12ccf0"
   },
   {
-    "url": "precache-manifest.df7c7f3441700afa60113acd1e7978b8.js",
-    "revision": "df7c7f3441700afa60113acd1e7978b8"
+    "url": "precache-manifest.c37ddb2f76f41671d92490a2ab26864f.js",
+    "revision": "c37ddb2f76f41671d92490a2ab26864f"
   },
   {
     "url": "robots.txt",
     "revision": "3ad0652bd17ff826a31fa29366021cfd"
   },
   {
-    "url": "static/css/main.f8feb2c3.chunk.css",
-    "revision": "55cc47875c345beb5698cd0f3f7eecb0"
+    "url": "static/css/main.eae3c986.chunk.css",
+    "revision": "e88a10a16a5e92df70dfe581a32016cc"
   },
   {
-    "url": "static/js/2.064fc736.chunk.js",
-    "revision": "d8cc7dd889f9eb0c7d6b9bad191d6539"
+    "url": "static/js/2.c165fca1.chunk.js",
+    "revision": "92e92927a091b6c8ce758446d5f769c6"
   },
   {
-    "url": "static/js/main.c040a9c7.chunk.js",
-    "revision": "02a203e2933ef6a4e94b96708ab964cf"
+    "url": "static/js/main.8a80c58a.chunk.js",
+    "revision": "e29ee34257f61ca04cddd0a6d7bd33fb"
   },
   {
     "url": "static/js/runtime-main.a0b42a97.js",
     "revision": "20555c21c89cbf435127644b85bcbac3"
+  },
+  {
+    "url": "static/media/chess-image.c52fd2d4.png",
+    "revision": "c52fd2d4e30fc58814f982250a25b718"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
