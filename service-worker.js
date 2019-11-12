@@ -29,15 +29,15 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [
   {
     "url": "index.html",
-    "revision": "8e5a21d3477995dd72b8dad7e9cb3e02"
+    "revision": "386adc0db2c5fa07984dcff7b9cc6c38"
   },
   {
-    "url": "precache-manifest.35247972cd50c82a6cfb683b61b82d44.js",
-    "revision": "35247972cd50c82a6cfb683b61b82d44"
+    "url": "precache-manifest.c37ddb2f76f41671d92490a2ab26864f.js",
+    "revision": "c37ddb2f76f41671d92490a2ab26864f"
   },
   {
-    "url": "static/css/main.f88cf4d8.chunk.css",
-    "revision": "4d134853477c6d84f101796a8d22eb02"
+    "url": "static/css/main.eae3c986.chunk.css",
+    "revision": "e88a10a16a5e92df70dfe581a32016cc"
   },
   {
     "url": "static/js/2.c165fca1.chunk.js",
