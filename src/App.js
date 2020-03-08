@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { Provider, useDispatch, useSelector } from "react-redux";
 
+import { clearBoard } from "./features/board/actions/board";
 import { downloadDiagram } from "./actions/downloadDiagram";
 import { selectSquare, unselectSquare } from "./actions/ui";
 import { Board } from "./components/Board";
@@ -19,6 +20,10 @@ function App() {
     dispatch(selectSquare(selected.row, selected.col));
   }, [selected, dispatch]);
 
+  const handleClearClick = useCallback(() => dispatch(clearBoard()), [
+    dispatch
+  ]);
+
   return (
     <div className={styles.App}>
       <section className={styles.board}>
@@ -31,8 +36,11 @@ function App() {
         />
       </section>
       <footer className={styles.footer}>
-        <button className={styles.downloadButton} onClick={handleDownloadClick}>
+        <button className={styles.button} onClick={handleDownloadClick}>
           Download
+        </button>
+        <button className={styles.button} onClick={handleClearClick}>
+          Clear
         </button>
       </footer>
     </div>

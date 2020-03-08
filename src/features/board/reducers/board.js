@@ -7,6 +7,9 @@ const initialState = {
 };
 
 export function boardReducer(board = initialState, action) {
+  if (action.type === "clearBoard") {
+    return { ...board, squares: {} };
+  }
   if (action.type === "setWhiteColor") {
     return {
       ...board,

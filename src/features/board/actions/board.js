@@ -1,3 +1,9 @@
+export function clearBoard() {
+  return {
+    type: "clearBoard"
+  };
+}
+
 export function setPiece(row, col, piece, color) {
   return {
     type: "setPiece",
