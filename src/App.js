@@ -1,40 +1,33 @@
-import React, { useReducer, useCallback } from "react";
-import styles from "./App.module.scss";
+import React, { useCallback } from "react";
+import { Provider, useDispatch, useSelector } from "react-redux";
 
-import { uiReducer } from "./reducers/ui";
 import { downloadDiagram } from "./actions/downloadDiagram";
+import { selectSquare, unselectSquare } from "./actions/ui";
 import { Board } from "./components/Board";
 import { Controls } from "./components/Controls";
-import { selectSquare, unselectSquare } from "./actions/ui";
-import { withBoard } from "./features/board";
+
+import styles from "./App.module.scss";
+import store from "./store";
 
 function App() {
-  const [ui, dispatchUi] = useReducer(uiReducer, { selected: null });
-  const handleSquareClick = useCallback(
-    (row, col) => dispatchUi(selectSquare(row, col)),
-    []
-  );
+  const dispatch = useDispatch();
+  const selected = useSelector(state => state.ui.selected);
 
   const handleDownloadClick = useCallback(async () => {
-    dispatchUi(unselectSquare());
+    dispatch(unselectSquare());
     await downloadDiagram();
-    dispatchUi(selectSquare(ui.selected.row, ui.selected.col));
-  }, [ui.selected]);
+    dispatch(selectSquare(selected.row, selected.col));
+  }, [selected, dispatch]);
 
   return (
     <div className={styles.App}>
       <section className={styles.board}>
-        <Board
-          rows={8}
-          cols={8}
-          selectedSquare={ui.selected}
-          onSquareClick={handleSquareClick}
-        />
+        <Board rows={8} cols={8} />
       </section>
       <section className={styles.buttons}>
         <Controls
-          row={ui.selected ? ui.selected.row : null}
-          col={ui.selected ? ui.selected.col : null}
+          row={selected ? selected.row : null}
+          col={selected ? selected.col : null}
         />
       </section>
       <footer className={styles.footer}>
@@ -46,6 +39,12 @@ function App() {
   );
 }
 
-const AppWithBoardState = withBoard(App);
+export function AppWithStore() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
+}
 
-export default AppWithBoardState;
+export default AppWithStore;
