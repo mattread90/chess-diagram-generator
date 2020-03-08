@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/chess-diagram-generator/static/css/main.dfeb060c.chunk.css",
-    "main.js": "/chess-diagram-generator/static/js/main.6ab2a5dc.chunk.js",
-    "main.js.map": "/chess-diagram-generator/static/js/main.6ab2a5dc.chunk.js.map",
+    "main.js": "/chess-diagram-generator/static/js/main.7f852f5c.chunk.js",
+    "main.js.map": "/chess-diagram-generator/static/js/main.7f852f5c.chunk.js.map",
     "runtime-main.js": "/chess-diagram-generator/static/js/runtime-main.a0b42a97.js",
     "runtime-main.js.map": "/chess-diagram-generator/static/js/runtime-main.a0b42a97.js.map",
-    "static/js/2.7b7a3873.chunk.js": "/chess-diagram-generator/static/js/2.7b7a3873.chunk.js",
-    "static/js/2.7b7a3873.chunk.js.map": "/chess-diagram-generator/static/js/2.7b7a3873.chunk.js.map",
+    "static/js/2.b7444555.chunk.js": "/chess-diagram-generator/static/js/2.b7444555.chunk.js",
+    "static/js/2.b7444555.chunk.js.map": "/chess-diagram-generator/static/js/2.b7444555.chunk.js.map",
     "index.html": "/chess-diagram-generator/index.html",
-    "precache-manifest.8ea18a3c8b9235399cd82d46d90dad34.js": "/chess-diagram-generator/precache-manifest.8ea18a3c8b9235399cd82d46d90dad34.js",
+    "precache-manifest.9b9698ef34f705b7745246612a2e2071.js": "/chess-diagram-generator/precache-manifest.9b9698ef34f705b7745246612a2e2071.js",
     "service-worker.js": "/chess-diagram-generator/service-worker.js",
     "static/css/main.dfeb060c.chunk.css.map": "/chess-diagram-generator/static/css/main.dfeb060c.chunk.css.map"
   }
