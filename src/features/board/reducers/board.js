@@ -1,19 +1,52 @@
 import { squareId } from "../utils/board";
 
-export function boardReducer(board, action) {
+const initialState = {
+  whiteColor: "#ffffff",
+  blackColor: "#000000",
+  squares: {}
+};
+
+export function boardReducer(board = initialState, action) {
+  if (action.type === "setWhiteColor") {
+    return {
+      ...board,
+      whiteColor: action.payload
+    };
+  }
+  if (action.type === "setBlackColor") {
+    return {
+      ...board,
+      blackColor: action.payload
+    };
+  }
+  if (
+    action.payload &&
+    typeof action.payload.row === "number" &&
+    typeof action.payload.col === "number"
+  ) {
+    return {
+      ...board,
+      squares: squaresReducer(board.squares, action)
+    };
+  }
+  return board;
+}
+
+function squaresReducer(squares, action) {
   if (
     typeof action.payload.row === "number" &&
     typeof action.payload.col === "number"
   ) {
     const id = squareId(action.payload.row, action.payload.col);
     return {
-      ...board,
-      [id]: square(board[id], action)
+      ...squares,
+      [id]: squareReducer(squares[id], action)
     };
   }
+  return squares;
 }
 
-function square(square, action) {
+function squareReducer(square, action) {
   switch (action.type) {
     case "setPiece":
       return {
